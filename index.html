@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         /* Styling list items */
-        li {
+        .fruites-container li {
             color: yellowgreen;
         }
     </style>
@@ -26,7 +26,7 @@
             <li>Mali baba</li>
         </ul>
 
-        <section>
+        <section class="fruites-container">
             <h1 id="Fruites-title">Fruites I like.</h1>
             <ul>
                 <li>Apple</li>
@@ -48,6 +48,17 @@
     </main>
 
     <script>
+        // getElementByTagName..
+
+       // Select all <h1> elements in the document
+        const allHeading = document.getElementsByTagName('h1');
+
+        // Loop through each <h1> element and log it to the console
+    for (const h1 of allHeading) {
+    console.log(h1);
+    }
+
+
         // Select all elements with the class "hello"
         const places = document.getElementsByClassName('hello');
         for (const place of places) {
@@ -69,6 +80,16 @@
         };
 
         console.log("amra caile ekhaneo kaj korte parbo"); // Log a general message
+
+
+        // querySelectorAll
+
+        const someLi = document.querySelectorAll('.fruites-container li');
+        // console.log(someLi);
+
+        for(const li of someLi) {
+            console.log(li.innerText);
+        }
     </script>
 
     <!-- Link external JavaScript file -->
