@@ -6,6 +6,7 @@
     <title>ture to DOM</title>
     <link rel="stylesheet" href="style.css">
     <style>
+        /* Styling list items */
         li {
             color: yellowgreen;
         }
@@ -14,23 +15,63 @@
 <body>
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam quos autem ducimus, eius cumque adipisci optio. Ad, natus molestiae incidunt minima nostrum blanditiis adipisci eius accusantium ullam delectus fuga?</p>
     </header>
     <main>
         <h1>My Awesome DOM de baba</h1>
+        <ul>
+            <li>Ali baba</li>
+            <li>Kali baba</li>
+            <li>Jali baba</li>
+            <li>Mali baba</li>
+        </ul>
+
+        <section>
+            <h1 id="Fruites-title">Fruites I like.</h1>
             <ul>
-                <li>Ali baba</li>
-                <li>Kali baba</li>
-                <li>jali baba</li>
-                <li>mali baba</li>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Mango</li>
+                <li>Litchi</li>
             </ul>
-        </h1>
+        </section>
+
+        <section>
+            <h1 id="places-title">Places I like to visit</h1>
+            <ul>
+                <li class="hello">Bandorban</li>
+                <li class="hello">Sitakondo</li>
+                <li class="hello">Meghaloya</li>
+                <li>Spain</li>
+            </ul>
+        </section>
     </main>
 
     <script>
-        console.log("amra caile ekhaneo kaj korte parbo")
+        // Select all elements with the class "hello"
+        const places = document.getElementsByClassName('hello');
+        for (const place of places) {
+            console.log(place); // Log each place element to the console
+        }
+
+        // Correctly select the element with the ID 'Fruites-title'
+        const FruitesTitle = document.getElementById('Fruites-title');
+        // Update the inner text of the selected element
+        FruitesTitle.innerText = "Fruits items changed by JS";
+
+        // Example object with a method
+        const student = {
+            name: "Abul",
+            age: 22,
+            study: function (time) {
+                console.log(time, "study korteche"); // Log study time
+            }
+        };
+
+        console.log("amra caile ekhaneo kaj korte parbo"); // Log a general message
     </script>
 
+    <!-- Link external JavaScript file -->
     <script src="js/dom.js"></script>
-    
 </body>
 </html>
