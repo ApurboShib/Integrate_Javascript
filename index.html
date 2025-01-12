@@ -8,7 +8,7 @@
     <style>
         /* Styling list items */
         .fruites-container li {
-            color: yellowgreen;
+            color: rgb(170, 255, 0);
         }
     </style>
 </head>
@@ -18,13 +18,16 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate veniam quos autem ducimus, eius cumque adipisci optio. Ad, natus molestiae incidunt minima nostrum blanditiis adipisci eius accusantium ullam delectus fuga?</p>
     </header>
     <main>
-        <h1>My Awesome DOM de baba</h1>
+
+        <section>
+            <h1>My Awesome DOM de baba</h1>
         <ul>
             <li>Ali baba</li>
             <li>Kali baba</li>
             <li>Jali baba</li>
             <li>Mali baba</li>
         </ul>
+        </section>
 
         <section class="fruites-container">
             <h1 id="Fruites-title">Fruites I like.</h1>
@@ -36,7 +39,7 @@
             </ul>
         </section>
 
-        <section>
+        <section id="place-container">
             <h1 id="places-title">Places I like to visit</h1>
             <ul>
                 <li class="hello">Bandorban</li>
@@ -55,14 +58,14 @@
 
         // Loop through each <h1> element and log it to the console
     for (const h1 of allHeading) {
-    console.log(h1);
+   // console.log(h1);
     }
 
 
         // Select all elements with the class "hello"
         const places = document.getElementsByClassName('hello');
         for (const place of places) {
-            console.log(place); // Log each place element to the console
+           // console.log(place); // Log each place element to the console
         }
 
         // Correctly select the element with the ID 'Fruites-title'
@@ -75,7 +78,7 @@
             name: "Abul",
             age: 22,
             study: function (time) {
-                console.log(time, "study korteche"); // Log study time
+                //console.log(time, "study korteche"); // Log study time
             }
         };
 
@@ -88,9 +91,11 @@
         // console.log(someLi);
 
         for(const li of someLi) {
-            console.log(li.innerText);
+           // console.log(li.innerText);
         }
+        
     </script>
+    <script src="js/styleInJs.js"></script>
 
     <!-- Link external JavaScript file -->
     <script src="js/dom.js"></script>
