@@ -16,3 +16,6 @@ for(const x of section) {
 const placeContainer = document.getElementById('place-container')
 
 placeContainer.style.backgroundColor = 'yellow';
+
+// const placeContainer = document.getElementsByClassName('.yellow-bg');
+// placeContainer.style.backgroundColor = 'green';
