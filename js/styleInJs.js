@@ -19,3 +19,7 @@ placeContainer.style.backgroundColor = 'yellow';
 
 // const placeContainer = document.getElementsByClassName('.yellow-bg');
 // placeContainer.style.backgroundColor = 'green';
+
+const li = document.createElement('li');
+li.innerText = "this is the new text";
+placeContainer.append(li);
