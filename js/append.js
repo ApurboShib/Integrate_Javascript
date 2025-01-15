@@ -1,23 +1,39 @@
-// console.log("append js is running");
-// 1. where to add.
+// 1. Add a new list item to the list
+// Find the element where to add
 const placeList = document.getElementById('places-list');
-// 2. what to be added
+
+// Create the list item and set its content
 const li = document.createElement('li');
 li.innerText = 'paharitoli bon';
 
-// 3. add the child.
-
+// Append the new list item to the list
 placeList.appendChild(li);
 
-
-// add a section in this 
-
-// step - 1; where to add
+// 2. Add a new section with a food list
+// Find the element where to add
 const mainContent = document.getElementById('main-content');
-// step - 2 : what to be added
+
+// Create the section element
 const section = document.createElement('section');
-section.innerText = 'mainContanier main add kiya ha maine';
 
-// step - 3 : add the child
+// Add a heading to the section
+const h1 = document.createElement('h1');
+h1.innerText = 'My Food List';
+section.appendChild(h1);
 
-section.append(section);
+// Add an unordered list to the section
+const ul = document.createElement('ul');
+
+// Add food items to the list
+const foodItems = ['Pizza', 'Burger', 'Pasta', 'Sushi'];
+foodItems.forEach(food => {
+  const foodLi = document.createElement('li');
+  foodLi.innerText = food;
+  ul.appendChild(foodLi);
+});
+
+// Append the unordered list to the section
+section.appendChild(ul);
+
+// Append the section to the main content
+mainContent.appendChild(section);
